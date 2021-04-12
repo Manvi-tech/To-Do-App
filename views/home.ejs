@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   
+<script src="https://kit.fontawesome.com/ac21b25d62.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="demo.css"> -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Make things Happen <i class="fas fa-clipboard-list"></i></h1>
+    <div id="container">
+        <div class="inline-block" id="left-div">
+            <h2>Create task &nbsp;<i class="far fa-calendar-plus"></i></i></h2>
+            <form action="/create/newtask" method="POST">
+                <div>
+                    <label for="category">category*</label>
+                    <select name="category" id="category" required>
+                     <option value="home">home</option>
+                     <option value="office" selected>office</option>
+                     <option value="other">other</option>
+                 </select>
+                </div>
+                <div>
+                    <label for="duedate">due date*</label>
+                 <input type="date" name="duedate" id="duedate" required>
+                </div>
+                <div>
+                    <label for="description">description*</label>
+                 <input type="text" name="task" placeholder="desciption" required>
+                </div>
+                <div>
+                 <button type="submit">Add +</button>
+                </div>
+            </form>
+        </div>
+       
+        <div class="inline-block" id="right-div">
+            <h2><i class="far fa-list-alt"></i> &nbsp; ToDo List </h2>
+           
+            <div id="lists">    
+              <% for(let i of todoList){ %>
+                 <div id="task">
+                    
+                        <div>
+                               <h3><%= i.task %></h3>
+                               <h4><%= i.duedate %></h4>
+                        </div>
+                    
+                    <div id="category">
+                        <%= i.category %>
+                    </div>
+                    <button><a href="/remove/deletetask/?id=<%=i.id %>"><i class="far fa-trash-alt"></i> </a></button>
+                   
+                </div>
+              
+              <% } %>
+            
+        </div>
+            <!-- end of lists  -->
+
+           
+        
+        </div> 
+        <!-- right div end -->
+
+
+    </div>
+    <!-- container end -->
+</body>
+</html>

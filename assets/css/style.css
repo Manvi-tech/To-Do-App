@@ -1,0 +1,129 @@
+
+*{
+    font-family: 'Caveat', cursive;
+    font-style:normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+             /* left-div */
+h1{
+    text-align:center;
+    color:#13257d;
+    margin-top:2%;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing:2px;
+    font-size:2.2rem;
+}
+h2{
+    text-align:center;
+    margin-top:3%;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+    font-weight:400;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:14%;
+    left:15%;
+    height:70%;
+    width:70%;
+    box-shadow:13px 13px 28px #cdced1,
+                -13px -13px 28px #ffffff;
+}
+#left-div{
+    height: 100%;
+    width:50%;
+    background-color: cornsilk;
+    
+}
+#right-div{
+    height: 100%;
+    position: relative;
+    width:50%;
+    background-color:#eccbeb; 
+}
+a{
+    text-decoration: none;
+}
+form{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+     
+}
+
+form div{
+   margin:20px;
+   width:100%;  
+}
+form label{
+    position: relative;
+    left:10%; 
+    display: inline-block;
+    width:140px;
+    font-size:larger; 
+}
+select{
+    padding:5px;
+    font-size: 1rem;
+    border:none;
+    border-bottom:1px solid black;
+    background-color: transparent;    
+}
+form input{
+    padding:5px;
+    font-size: 1rem;
+    border:none;
+    vertical-align: middle;
+    border-bottom:1px solid black;
+    background-color: transparent;
+   
+}
+ button{
+    padding:5px;
+    font-weight:600;
+    font-size:1.2rem;
+    background-color:#eccbeb;
+    width:100px;
+    position: relative;
+    left:30%;
+    border:none;
+}
+
+                        /* right-div */
+
+    #right-div #lists{
+        display:flex;
+        flex-direction: column;
+        margin-top:10px;
+    }
+
+    #lists #task{
+        display:flex;
+        padding:10px;
+    }
+    #task div{
+        margin-left:20px;
+        font-size:1.3rem;
+        
+    }
+     
+    #task #category{
+        background-color:cornsilk;
+        color:darkblue;
+        width:70px;
+        height:30px;
+        text-align: center;
+        margin-top:15px;
+    }
+    #right-div button{
+        margin-top:10px;
+       
+    }
+    #right-div button a{
+        color:#010613;
+    }
